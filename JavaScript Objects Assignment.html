@@ -1,0 +1,57 @@
+<script type="text/javascript">
+  
+//Exercises: JavaScript Objects (A2 - Assignment)
+
+//1. Make a Rectangle class that stores a width and a height.
+//Make a few instances and print out the properties.
+//Modify a few of the properties and print out the results again.
+  class Rectangle{
+    constructor(width, height){
+      this.width = width;
+      this.height = height;
+      console.log("Width = " + this.width + " sq units");
+      console.log("Height = " + this.height + " sq units");
+      //console.log("Area is = " + this.width * this.height + " sq units");
+    }
+  //2. Add a getArea method. Use the prototype property
+    getArea(){
+      console.log("Area is = " + this.width * this.height + " sq units");
+    }
+  }
+  let obj1 = new Rectangle(4,5);
+  let obj2 = new Rectangle(6,9);
+  let obj3 = new Rectangle(7,5);
+  obj1.height = 50;
+  obj1.getArea();
+
+
+/*
+4. Make a variable whose value is an object with firstName and
+lastName properties, but don’t define a Person class first.
+Try looking up the first and last names. Try changing the last name.
+It seems very odd to Java programmers to make an object without
+first defining a class, but JavaScript programmers do this sort of
+thing all the time.
+*/
+  let person_obj = {
+    firstName: "Karl",
+    lastName: "Marx"
+  };
+  console.log(person_obj.firstName);
+  console.log(person_obj.lastName);
+  person_obj.lastName = "Angels";
+  console.log(person_obj.lastName);
+
+/*
+5. Try reading the middleName property from your variable above.
+Try assigning to the middleName property.
+Try reading the property again after you assign to it.
+Is this behavior a good thing or a bad thing?
+*/
+  console.log(person_obj.middleName);  //undefined
+  person_obj.middleName = "Carlos";
+  console.log(person_obj.middleName);  //output - Carlos
+  console.log(person_obj);
+  //output - {firstName: "Karl", lastName: "Angels", middleName: "Carlos"}
+
+</script>

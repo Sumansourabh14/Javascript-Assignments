@@ -1,0 +1,200 @@
+<script type="text/javascript">
+
+//Javascript Logical Assignment
+
+//1.Make a function that returns “even” or “odd” depending
+//on the number passed to it.
+ function parity(oe){
+    if(oe%2==0){
+      return "Even";
+    }
+    else{
+      return "odd";
+    }
+  }
+  console.log(parity(1));
+  console.log(parity(2));
+
+
+  function max(a, b, c){
+    if(a>b && a>c){
+      return a;
+    }
+    else if(b>a && b>c){
+      return b;
+    }
+    else{
+      return c;
+    }
+  }
+  console.log(max(1,2,3));
+  console.log(max(2,3,1));
+
+
+  function seven() {
+    x = 7;
+    return (x);
+  }
+  console.log(seven());
+
+
+//Create an array containing four random numbers.
+//Use one-step array allocation.
+//Print out the array by evaluating the array variable in Firebug.
+  var randomArray = [];
+  for(var ra=0;ra<4;ra++){
+    var math_ = Math.random();
+    randomArray.push(math_);
+  }
+  console.log(randomArray);
+
+
+//Create an array containing 100 random numbers.
+//Use two-step array allocation. Print out the array
+  var randomArr = [];
+  for(var ab=0;ab<200;ab+=2){
+    var bc = Math.random();
+    randomArr.push(bc);
+  }
+  console.log(randomArr);
+
+//Make a function that given an array of strings, where each
+//string represents a number, returns an array of the corresponding numbers.
+  //var stringArray1 = ["1.2", "1.3", "1.4"];
+  function convertStringtoInt(stringArray1){
+    return parseInt(stringArray1);
+  }
+  console.log("1.2","2.2","3.4");
+
+//Define a variable x and give it a value of 5.
+//Evaluate x and verify it shows the value
+  var cc = 5;
+  console.log(cc);
+
+  //3. Try to predict what you will get for half(x), half(4), and half(3).
+  //It is simple to predict what you will get for half(4), but,
+  //depending on your programming background, it might not be so easy
+  //to predict what you will get for half(x) and half(3).
+  //Call half(x), half(4), and half(3) and see if you were right.
+  function half(cc) {
+    return(cc / 2);
+  }
+  console.log(half(4));
+  console.log(half(3));
+  //console.log(half(cc));
+
+  // 6. Make a function called calculation that, given three numbers
+  //a, b, and c, returns (a + b)/c. Try it with a few normal values.
+  //Then, try to predict what you will get for calculation(1, 1, 0),
+  //calculation(-1, -1, 0), and calculation(1, -1, 0).
+  //Try those tests and see if you get what you expected.
+  function calculation(val1, val2, val3){
+    return (val1 + val2)/val3;
+  }
+  console.log((1,1,0));            // 0
+  console.log((-1,-1,0));          // 0
+  console.log((1,-1,0));           // 0
+
+  //Try the “more powerful practice” approach from the notes,
+  //where you load an HTML file that has a script tag pointing at a
+  //JavaScript file. Put a function definition in the JS file,
+  //load the HTML file, go to the console, and call the function.
+  //Then, add a second function definition to the JS file,
+  //reload the HTML file, return to the console, and call the new function
+  function putting(){
+    console.log("Hello boi");
+    console.log("H");
+  }
+  //called in console of Chrome
+
+//Write a function called isEven that, given a number, returns
+//true if the number is even and false if the number is odd.
+//This would be simple if we had covered if statements or
+//the ?: ternary operator, but we haven’t, so you cannot use either one.
+  function isEven(number1){
+    switch(number1 % 2){
+      case 0:
+        return 'Even';
+        break;
+      case 1:
+        return "Odd";
+        break;
+    }
+  }
+  console.log(isEven(2));    //even
+  console.log(isEven(35));    //odd
+
+
+//Write a program that prints a multiplication table for
+//numbers up to 12.
+var arrayOf12 = [];
+//var mult = 1;
+var num1 = 1;
+function tableOf12(num2){
+  for(var in1=1;in1<13;in1++){
+    num_1 = num2 * in1;
+    arrayOf12.push(num_1);
+  }
+  return arrayOf12;
+}
+console.log(tableOf12(2));    // table of 12
+
+//11. Write a function that returns the largest element in a list.
+var list_a = [7,99,2,3,4,5,6];
+var max = list_a[0];
+for(var in2=0;in2<list_a.length;in2++){
+  if(max < list_a[in2]){
+    max = list_a[in2];
+  }
+}
+console.log(max);
+//console.log(list_a);
+
+//5. Make a function that takes a number and a short string,
+//and returns the string concatenated that number of times
+  function concatenate(string1, n){
+    var stringTimes = "";
+    for(var ite=0;ite<n;ite++){
+      stringTimes = stringTimes + string1;
+    }
+    return stringTimes;
+  }
+  console.log(concatenate("ok",3));
+  console.log(concatenate("x",5));
+
+//13. Write a function that checks whether an element occurs
+//in a list.
+  function search(searchElement){
+    var list_b = [2,3,4,5,6,7,8,9];
+    for(var i=0;i<list_b.length;i++){
+      if(searchElement == list_b[i]){
+        return "Element found!";
+      }
+    }
+  }
+  console.log(search(5));    // Element found!
+
+
+//Write a function that returns the elements on odd positions
+//in a list.
+  function oddReturn(){
+    var list_odd = [44,66,75,45,33,68,76,99];
+    for(var j=1;j<=list_odd.length;j=j+2){
+    }
+    return list_odd;
+  }
+  console.log(oddReturn());
+
+//15. Write a function that computes the running total of a list.
+  function runningTotal(){
+    var list_total = [4,6,7,8,3,6,7,9,20];
+    var total1 = 0;
+    for(var az=0;az<list_total.length;az++){
+      total1 = total1 + list_total[az];
+    }
+    return total1;
+  }
+  console.log(runningTotal());
+
+
+</script>
